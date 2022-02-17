@@ -19,6 +19,7 @@
 		0B789A6727BDC772000E643A /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B789A6627BDC772000E643A /* Global.swift */; };
 		0B789A6B27BDCC0B000E643A /* LetterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B789A6A27BDCC0B000E643A /* LetterButtonView.swift */; };
 		0B789A6D27BDCD10000E643A /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B789A6C27BDCD10000E643A /* Keyboard.swift */; };
+		0B789A7027BDE870000E643A /* Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B789A6F27BDE86F000E643A /* Shake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		0B789A6627BDC772000E643A /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		0B789A6A27BDCC0B000E643A /* LetterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonView.swift; sourceTree = "<group>"; };
 		0B789A6C27BDCD10000E643A /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		0B789A6F27BDE86F000E643A /* Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shake.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		0B789A4827BDBE88000E643A /* WordleClone */ = {
 			isa = PBXGroup;
 			children = (
+				0B789A6E27BDE865000E643A /* Animations */,
 				0B789A4927BDBE88000E643A /* WordleCloneApp.swift */,
 				0B789A6127BDC548000E643A /* ViewModels */,
 				0B789A5E27BDC4A7000E643A /* Models */,
@@ -123,6 +126,14 @@
 				0B789A6427BDC672000E643A /* WordleDataModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0B789A6E27BDE865000E643A /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				0B789A6F27BDE86F000E643A /* Shake.swift */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 				0B789A6027BDC4B3000E643A /* Guess.swift in Sources */,
 				0B789A6D27BDCD10000E643A /* Keyboard.swift in Sources */,
 				0B789A5D27BDC3F0000E643A /* Color+Extension.swift in Sources */,
+				0B789A7027BDE870000E643A /* Shake.swift in Sources */,
 				0B789A6527BDC672000E643A /* WordleDataModel.swift in Sources */,
 				0B789A4A27BDBE88000E643A /* WordleCloneApp.swift in Sources */,
 				0B789A6727BDC772000E643A /* Global.swift in Sources */,

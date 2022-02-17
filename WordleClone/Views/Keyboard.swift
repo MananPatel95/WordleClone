@@ -20,12 +20,16 @@ struct Keyboard: View {
                     LetterButtonView(letter: letter)
                 }
                 .cornerRadius(4)
+                .disabled(dm.disabledKeys)
+                .opacity(dm.disabledKeys ? 0.6 : 1)
             }
             HStack(spacing: 2) {
                 ForEach(middleRowArray, id: \.self) { letter in
                     LetterButtonView(letter: letter)
                 }
                 .cornerRadius(4)
+                .disabled(dm.disabledKeys)
+                .opacity(dm.disabledKeys ? 0.6 : 1)
             }
             HStack(spacing: 2) {
                 // Enter Button
@@ -39,12 +43,16 @@ struct Keyboard: View {
                 .foregroundColor(Color.primary)
                 .background(Color.unused)
                 .cornerRadius(4)
+                .disabled(dm.currentWord.count < 5 || !dm.inPlay)
+                .opacity(dm.currentWord.count < 5 || !dm.inPlay ? 0.6 : 1)
                 
                 // Letters
                 ForEach(thirdRowArray, id: \.self) { letter in
                     LetterButtonView(letter: letter)
                 }
                 .cornerRadius(4)
+                .disabled(dm.disabledKeys)
+                .opacity(dm.disabledKeys ? 0.6 : 1)
                 
                 // Delete Button
                 Button {
@@ -55,6 +63,8 @@ struct Keyboard: View {
                         .font(.system(size: 20, weight: .heavy, design: .default))
                         .foregroundColor(Color.primary)
                         .background(Color.unused)
+                        .disabled(dm.currentWord.count == 0 || !dm.inPlay)
+                        .opacity(dm.currentWord.count == 0 || !dm.inPlay ? 0.6 : 1)
                 }
                 .cornerRadius(4)
             }

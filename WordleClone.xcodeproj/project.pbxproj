@@ -17,6 +17,8 @@
 		0B789A6327BDC567000E643A /* GuessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B789A6227BDC567000E643A /* GuessView.swift */; };
 		0B789A6527BDC672000E643A /* WordleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B789A6427BDC672000E643A /* WordleDataModel.swift */; };
 		0B789A6727BDC772000E643A /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B789A6627BDC772000E643A /* Global.swift */; };
+		0B789A6B27BDCC0B000E643A /* LetterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B789A6A27BDCC0B000E643A /* LetterButtonView.swift */; };
+		0B789A6D27BDCD10000E643A /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B789A6C27BDCD10000E643A /* Keyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		0B789A6227BDC567000E643A /* GuessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessView.swift; sourceTree = "<group>"; };
 		0B789A6427BDC672000E643A /* WordleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleDataModel.swift; sourceTree = "<group>"; };
 		0B789A6627BDC772000E643A /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		0B789A6A27BDCC0B000E643A /* LetterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonView.swift; sourceTree = "<group>"; };
+		0B789A6C27BDCD10000E643A /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 			children = (
 				0B789A4B27BDBE88000E643A /* GameView.swift */,
 				0B789A6227BDC567000E643A /* GuessView.swift */,
+				0B789A6A27BDCC0B000E643A /* LetterButtonView.swift */,
+				0B789A6C27BDCD10000E643A /* Keyboard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,9 +196,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B789A6B27BDCC0B000E643A /* LetterButtonView.swift in Sources */,
 				0B789A4C27BDBE88000E643A /* GameView.swift in Sources */,
 				0B789A6327BDC567000E643A /* GuessView.swift in Sources */,
 				0B789A6027BDC4B3000E643A /* Guess.swift in Sources */,
+				0B789A6D27BDCD10000E643A /* Keyboard.swift in Sources */,
 				0B789A5D27BDC3F0000E643A /* Color+Extension.swift in Sources */,
 				0B789A6527BDC672000E643A /* WordleDataModel.swift in Sources */,
 				0B789A4A27BDBE88000E643A /* WordleCloneApp.swift in Sources */,

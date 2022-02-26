@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B343B0327CAE19F006F0A6A /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B343B0227CAE19F006F0A6A /* FlipView.swift */; };
 		0B789A4A27BDBE88000E643A /* WordleCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B789A4927BDBE88000E643A /* WordleCloneApp.swift */; };
 		0B789A4C27BDBE88000E643A /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B789A4B27BDBE88000E643A /* GameView.swift */; };
 		0B789A4E27BDBE8A000E643A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B789A4D27BDBE8A000E643A /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B343B0227CAE19F006F0A6A /* FlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
 		0B789A4627BDBE88000E643A /* WordleClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordleClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B789A4927BDBE88000E643A /* WordleCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleCloneApp.swift; sourceTree = "<group>"; };
 		0B789A4B27BDBE88000E643A /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				0B789A6F27BDE86F000E643A /* Shake.swift */,
+				0B343B0227CAE19F006F0A6A /* FlipView.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B789A6B27BDCC0B000E643A /* LetterButtonView.swift in Sources */,
+				0B343B0327CAE19F006F0A6A /* FlipView.swift in Sources */,
 				0B789A4C27BDBE88000E643A /* GameView.swift in Sources */,
 				0B789A6327BDC567000E643A /* GuessView.swift in Sources */,
 				0B789A6027BDC4B3000E643A /* Guess.swift in Sources */,
@@ -347,6 +351,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WordleClone/Preview Content\"";
+				DEVELOPMENT_TEAM = SQQR3FC7MB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WordleClone/Info.plist;
@@ -378,6 +383,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WordleClone/Preview Content\"";
+				DEVELOPMENT_TEAM = SQQR3FC7MB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WordleClone/Info.plist;

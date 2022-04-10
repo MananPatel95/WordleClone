@@ -19,7 +19,7 @@ struct Keyboard: View {
                 ForEach(topRowArray, id: \.self) { letter in
                     LetterButtonView(letter: letter)
                 }
-                .cornerRadius(4)
+                .cornerRadius(5)
                 .disabled(dm.disabledKeys)
                 .opacity(dm.disabledKeys ? 0.6 : 1)
             }
@@ -27,7 +27,7 @@ struct Keyboard: View {
                 ForEach(middleRowArray, id: \.self) { letter in
                     LetterButtonView(letter: letter)
                 }
-                .cornerRadius(4)
+                .cornerRadius(5)
                 .disabled(dm.disabledKeys)
                 .opacity(dm.disabledKeys ? 0.6 : 1)
             }
@@ -38,11 +38,11 @@ struct Keyboard: View {
                 } label: {
                     Text("Enter")
                 }
-                .font(.system(size: 20, weight: .light, design: .default))
+                .font(.system(size: 16, weight: .semibold, design: .default))
                 .frame(width: 60, height: 50)
                 .foregroundColor(Color.primary)
                 .background(Color.unused)
-                .cornerRadius(4)
+                .cornerRadius(5)
                 .disabled(dm.currentWord.count < 5 || !dm.inPlay)
                 .opacity(dm.currentWord.count < 5 || !dm.inPlay ? 0.6 : 1)
                 
@@ -50,7 +50,7 @@ struct Keyboard: View {
                 ForEach(thirdRowArray, id: \.self) { letter in
                     LetterButtonView(letter: letter)
                 }
-                .cornerRadius(4)
+                .cornerRadius(5)
                 .disabled(dm.disabledKeys)
                 .opacity(dm.disabledKeys ? 0.6 : 1)
                 
@@ -66,7 +66,7 @@ struct Keyboard: View {
                         .disabled(dm.currentWord.count == 0 || !dm.inPlay)
                         .opacity(dm.currentWord.count == 0 || !dm.inPlay ? 0.6 : 1)
                 }
-                .cornerRadius(4)
+                .cornerRadius(5)
             }
         }
     }

@@ -10,6 +10,8 @@ import SwiftUI
 class WordleDataModel: ObservableObject {
     @Published var guesses: [Guess] = []
     @Published var incorrectAttempts = [Int](repeating: 0, count: 6)
+    @Published var toastText: String?
+    @Published var showStats = false
     
     var keyColors = [String: Color]()
     var matchedLetters = [String]()
@@ -19,7 +21,9 @@ class WordleDataModel: ObservableObject {
     var tryIndex = 0
     var inPlay = false
     var gameOver = false
-    
+    var toastWords = ["Genius", "What a pro", "Magnificent", "Impressive", "Great", "Phew"]
+    var currentStat: Statistic
+
     var gameStarted: Bool {
         !currentWord.isEmpty || tryIndex > 0
     }
@@ -29,6 +33,7 @@ class WordleDataModel: ObservableObject {
     }
     
     init() {
+        currentStat = Statistic.loadStat()
         newGame()
     }
     
@@ -72,6 +77,8 @@ class WordleDataModel: ObservableObject {
             gameOver = true
             print("You Win")
             setCurrentGuessColors()
+            currentStat.update(win: true, index: tryIndex)
+            showToast(with: toastWords[tryIndex])
             inPlay = false
         }
         else {
@@ -83,12 +90,14 @@ class WordleDataModel: ObservableObject {
                 if tryIndex == 6 {
                     gameOver = true
                     inPlay = false
-                    print("You Los")
+                    currentStat.update(win: false)
+                    print("You Lose")
                 }
             } else {
                 withAnimation {
                     self.incorrectAttempts[tryIndex] += 1
                 }
+                showToast(with: "Not in word list.")
                 incorrectAttempts[tryIndex] = 0
             }
         }
@@ -167,4 +176,43 @@ class WordleDataModel: ObservableObject {
             }
         }
     }
+    
+    func showToast(with text: String?) {
+        withAnimation {
+            toastText = text
+        }
+        withAnimation(Animation.linear(duration: 0.2).delay(3)) {
+            toastText = nil
+            if gameOver {
+                withAnimation(Animation.linear(duration: 0.2).delay(3)) {
+                    showStats.toggle()
+                }
+            }
+        }
+    }
+    
+    func shareResult() {
+        let stat = Statistic.loadStat()
+        let resultString = """
+        Wordle \(stat.games) \(tryIndex < 6 ? "\(tryIndex + 1)/6" : "")
+        \(guesses.compactMap{$0.results}.joined(separator: "\n"))
+        """
+        print(resultString)
+        let activityController = UIActivityViewController(activityItems: [resultString], applicationActivities: nil)
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            UIWindow.key?.rootViewController!
+                .present(activityController, animated: true)
+        case .pad:
+            activityController.popoverPresentationController?.sourceView = UIWindow.key
+            activityController.popoverPresentationController?.sourceRect = CGRect(x: Global.screenWidth / 2,
+                                                                                  y: Global.screenHeight / 2,
+                                                                                  width: 200,
+                                                                                  height: 200)
+            UIWindow.key?.rootViewController!.present(activityController, animated: true)
+        default:
+            break
+        }
+    }
+
 }
